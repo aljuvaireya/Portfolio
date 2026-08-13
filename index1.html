@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aljuvaireya P | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            min-height: 90vh;
+            background: linear-gradient(135deg, #000000, #3e0808, #631c1c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 60px 20px;
+        }
+
+        .header-content {
+            max-width: 800px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            margin-bottom: 25px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.25);
+        }
+
+        .header-content h1 {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .headline {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .profession {
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #000000;
+            border-bottom: 1px solid #631c1c;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 15px;
+        }
+
+        nav ul li {
+            margin: 5px 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b94b4b;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 70px 20px;
+        }
+
+        .section-content {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            color: #222222;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(99, 28, 28, 0.35);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #631c1c;
+            margin-bottom: 30px;
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-text {
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-card {
+            background: #f7f7f7;
+            border-left: 5px solid #631c1c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .education-card h3 {
+            color: #631c1c;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            margin: 5px 0;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skill-category {
+            margin-bottom: 30px;
+        }
+
+        .skill-category h3 {
+            color: #631c1c;
+            margin-bottom: 15px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #3e0808;
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* ================= INTERNSHIP ================= */
+
+        .internship-card {
+            background: #f7f7f7;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #631c1c;
+        }
+
+        .internship-card h3 {
+            color: #631c1c;
+            margin-bottom: 10px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .project-card {
+            background: #f7f7f7;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #631c1c;
+        }
+
+        .project-card h3 {
+            color: #631c1c;
+            margin-bottom: 10px;
+        }
+
+        .project-button {
+            display: inline-block;
+            margin-top: 10px;
+            background: #3e0808;
+            color: #ffffff;
+            padding: 9px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-button:hover {
+            background: #812929;
+        }
+
+        /* ================= CERTIFICATES ================= */
+
+        .certificate-list {
+            list-style: none;
+        }
+
+        .certificate-list li {
+            background: #f7f7f7;
+            margin-bottom: 10px;
+            padding: 14px 18px;
+            border-left: 4px solid #631c1c;
+            border-radius: 8px;
+        }
+
+        /* ================= ATTRIBUTES ================= */
+
+        .attributes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .attribute {
+            padding: 10px 18px;
+            background: #3e0808;
+            color: #ffffff;
+            border-radius: 20px;
+        }
+
+        /* ================= ACHIEVEMENTS ================= */
+
+        .achievement-card {
+            background: #f7f7f7;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #631c1c;
+        }
+
+        .achievement-card h3 {
+            color: #631c1c;
+        }
+
+        /* ================= PERSONAL DETAILS ================= */
+
+        .personal-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .detail {
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .detail strong {
+            color: #631c1c;
+        }
+
+        /* ================= RESUME ================= */
+
+        .resume-section {
+            text-align: center;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: #3e0808;
+            color: #ffffff;
+            padding: 13px 28px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .download-button:hover {
+            background: #812929;
+            transform: translateY(-2px);
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-container {
+            text-align: center;
+        }
+
+        .contact-container p {
+            margin: 10px 0;
+        }
+
+        .contact-container a {
+            color: #631c1c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 10px;
+            border-top: 1px solid #631c1c;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .headline {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 7px 0;
+            }
+
+            .section-content {
+                padding: 25px;
+            }
+
+            .personal-details {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header id="home">
+
+        <div class="header-content">
+
+            <img src="Photo.jpg"
+                 alt="Aljuvaireya P Profile Picture"
+                 class="profile-picture">
+
+            <h1>ALJUVAIREYA P</h1>
+
+            <p class="headline">
+                BCA Graduate | MBA Pursuing @ Amity University Online
+            </p>     
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#education">Education</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#internship">Internship</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#certificates">Certificates</a></li>
+
+            <li><a href="#achievements">Achievements</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-content">
+
+            <h2 class="section-title">About Me</h2>
+
+            <p class="about-text">
+                Motivated and self-driven Full Stack Developer (Fresher)
+                with strong foundational knowledge in web and software
+                development. Proficient in HTML, CSS, JavaScript, Python,
+                Java, and C++, with hands-on experience building responsive
+                web interfaces and working on backend logic. Passionate
+                about learning new technologies and contributing to
+                real-world projects. Eager to join a forward-thinking
+                development team where I can apply my skills and grow as
+                a full stack developer.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Education</h2>
+
+
+            <div class="education-card">
+
+                <h3>Master of Business Administration (MBA)</h3>
+
+                <p>
+                    <strong>Amity University, Uttar Pradesh</strong>
+                </p>
+
+                <p>
+                    Pursuing | Online | 2026 - Present
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+
+                <p>
+                    <strong>
+                        Valliammal College for Women,
+                        Affiliated to University of Madras
+                    </strong>
+                </p>
+
+                <p>
+                    84% | 2023 - 2026
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>Higher Secondary Certificate (HSC)</h3>
+
+                <p>
+                    <strong>
+                        Mary Sargent Higher Secondary School,
+                        Tirunelveli
+                    </strong>
+                </p>
+
+                <p>
+                    91% | 2019 - 2020
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>Secondary School Leaving Certificate (SSLC)</h3>
+
+                <p>
+                    95% | 2017 - 2018
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Skills</h2>
+
+
+            <div class="skill-category">
+
+                <h3>Programming Languages</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">Python</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">PHP</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Web Technologies</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Data Analysis & Visualization</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">MS Excel</span>
+                    <span class="skill">MS Power BI</span>
+                    <span class="skill">MySQL</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Emerging Technology</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">Gen AI</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Tools & Platforms</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">GitHub</span>
+                    <span class="skill">VS Code</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Accounting & Office Tools</h3>
+
+                <div class="skills-container">
+
+                    <span class="skill">Tally ERP 9</span>
+                    <span class="skill">Advanced Tally</span>
+                    <span class="skill">Cloud Accounting</span>
+                    <span class="skill">Office Automation</span>
+                    <span class="skill">Advanced Excel</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTERNSHIP ================= -->
+
+    <section id="internship">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Internship</h2>
+
+            <div class="internship-card">
+
+                <h3>Full Stack Java Development Intern</h3>
+
+                <p>
+                    <strong>Kaashiv Info Tech, Chennai, Tamil Nadu</strong>
+                </p>
+
+                <p>
+                    Duration: 30 Days | May 2025 – June 2025
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Projects</h2>
+
+
+            <div class="project-card">
+
+                <h3>Digital Portfolio Website</h3>
+
+                <p>
+                    Personal digital portfolio website showcasing
+                    education, skills, projects and professional profile.
+                </p>
+
+                <a href="https://aljuvaireya.github.io/Portfolio/"
+                   target="_blank"
+                   class="project-button">
+                    View Portfolio
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Citizen AI – Intelligent Citizen Engagement Platform
+                </h3>
+
+                <p>
+                    Generative AI with IBM.
+                </p>
+
+                <a href="https://github.com/aljuvaireya/Citizen-AI.git"
+                   target="_blank"
+                   class="project-button">
+                    View GitHub Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section id="certificates">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Certificates</h2>
+
+            <ul class="certificate-list">
+
+                <li>
+                    Edunet - Front End Web Development - IBM SkillsBuild
+                </li>
+
+                <li>
+                    SAWIT. AI Learnathon – GUVI | HCLTech
+                </li>
+
+                <li>
+                    Generative AI with IBM Cloud - IBM SkillsBuild
+                </li>
+
+                <li>
+                    Object Oriented Programming using Python -
+                    Infosys | Springboard
+                </li>
+
+                <li>
+                    Full Stack Java Internship Completion -
+                    Kaashiv InfoTech
+                </li>
+
+                <li>
+                    Certificate in Office Automation -
+                    Spice Computer Institute
+                </li>
+
+                <li>
+                    Certificate in Microsoft Office -
+                    Apollo Computer Education LTD
+                </li>
+
+                <li>
+                    Master in Professional Accountant -
+                    Apollo Computer Education LTD
+                </li>
+
+                <li>
+                    Hindi Language Course
+                    [Prathmik to Praveen Uttarardh] -
+                    Dakshina Bharat Hindi Prachar Sabha
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERSONAL ATTRIBUTES ================= -->
+
+    <section id="attributes">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Personal Attributes</h2>
+
+            <div class="attributes-container">
+
+                <span class="attribute">Typing Proficiency</span>
+
+                <span class="attribute">Willing to Learn</span>
+
+                <span class="attribute">Time Management</span>
+
+                <span class="attribute">Positive Attitude</span>
+
+                <span class="attribute">Problem Solving</span>
+
+                <span class="attribute">Team Coordination</span>
+
+                <span class="attribute">Strong Leadership Skills</span>
+
+                <span class="attribute">Good Communication Skills</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section id="achievements">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Achievements</h2>
+
+
+            <div class="achievement-card">
+
+                <h3>Rashtrabhasha Visharad</h3>
+
+                <p>
+                    Dakshina Bharat Hindi Prachar Sabha | 2014
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <h3>Rashtrabhasha Praveen</h3>
+
+                <p>
+                    Dakshina Bharat Hindi Prachar Sabha | 2015
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <h3>Table Tennis Player</h3>
+
+                <p>
+                    District Level | Tirunelveli | 2015
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERSONAL DETAILS ================= -->
+
+    <section id="personal">
+
+        <div class="section-content">
+
+            <h2 class="section-title">Personal Details</h2>
+
+            <div class="personal-details">
+
+                <div class="detail">
+                    <strong>Name :</strong> Aljuvaireya P
+                </div>
+
+                <div class="detail">
+                    <strong>Date of Birth :</strong> 09/11/2002
+                </div>
+
+                <div class="detail">
+                    <strong>Languages :</strong> Tamil, English, Hindi
+                </div>
+
+                <div class="detail">
+                    <strong>Nationality :</strong> Indian
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESUME ================= -->
+
+    <section id="resume">
+
+        <div class="section-content resume-section">
+
+            <h2 class="section-title">Resume</h2>
+
+            <p>
+                You can view or download my latest resume.
+            </p>
+
+            <a href="Resume.pdf"
+               target="_blank"
+               class="download-button">
+                Download CV
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-content contact-container">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <p>
+                <strong>Location :</strong>
+                Chennai, Tamil Nadu
+            </p>
+
+            <p>
+                <strong>Email :</strong>
+                <a href="mailto:aljuvaireya@gmail.com">
+                    aljuvaireya@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub :</strong>
+                <a href="https://github.com/aljuvaireya"
+                   target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
+
+            <p>
+                <strong>Portfolio :</strong>
+                <a href="https://aljuvaireya.github.io/Portfolio/"
+                   target="_blank">
+                    Digital Portfolio
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 ALJUVAIREYA P. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                const targetId =
+                    this.getAttribute('href').substring(1);
+
+                const targetElement =
+                    document.getElementById(targetId);
+
+                if (targetElement) {
+
+                    window.scrollTo({
+
+                        top: targetElement.offsetTop - 60,
+
+                        behavior: 'smooth'
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
